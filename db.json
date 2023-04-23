@@ -1,0 +1,74 @@
+{
+    "skis": [
+        {
+            "id": 1,
+            "brand": "Head",
+            "name": "Kore 105",
+            "dimensions": {
+                "waist": 105,
+                "tip": 135,
+                "tail": 125
+            },
+            "lengths": [171, 180, 189],
+            "year": "2018",
+            "weight": 1860,
+            "image": "http://localhost:3000/images/kore.jpeg"
+        },
+        {
+            "id": 2,
+            "brand": "Atomic",
+            "name": "Bent Chetler 120",
+            "dimensions": {
+                "waist": 120,
+                "tip": 144,
+                "tail": 135
+            },
+            "lengths": [176, 184, 192],
+            "year": "2022",
+            "weight": 1800,
+            "image": "http://localhost:3000/images/chetler.jpg"
+        },
+        {
+            "id": 3,
+            "brand": "ON3P",
+            "name": "Woodsman 110",
+            "dimensions": {
+                "waist": 110,
+                "tip": 139,
+                "tail": 128
+            },
+            "lengths": [167, 172, 177, 182, 187, 192],
+            "year": "2022",
+            "weight": 2240,
+            "image": "http://localhost:3000/images/woodsman.jpeg"
+        },
+        {
+            "id": 4,
+            "brand": "Blizzard",
+            "name": "Zero G 95",
+            "dimensions": {
+                "waist": 95,
+                "tip": 127,
+                "tail": 111
+            },
+            "lengths": [157, 164, 171, 178, 185],
+            "year": "2023",
+            "weight": 1260,
+            "image": "http://localhost:3000/images/zerog.jpeg"
+        },
+        {
+            "id": 5,
+            "brand": "Sego",
+            "name": "Comp 110",
+            "dimensions": {
+                "waist": 110,
+                "tip": 140,
+                "tail": 131
+            },
+            "lengths": [175, 181, 187, 192],
+            "year": "2021",
+            "weight": 2230,
+            "image": "http://localhost:3000/images/sego.jpg"
+        }
+    ]
+}
