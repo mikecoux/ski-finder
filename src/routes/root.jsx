@@ -9,7 +9,7 @@ export default function Root() {
                 <NavLink to='/' end>
                     <img src='/images/profile.png' alt='Mike' className='h-12 hover:blur-sm'/>
                 </NavLink>
-                <NavLink to='/skis' className={'text-sky-500 hover:text-sky-700 self-center'}>
+                <NavLink to='/skis' end className={'text-sky-500 hover:text-sky-700 self-center'}>
                     Browse Skis
                 </NavLink>
                 <NavLink to='/quiz' className='text-sky-500 hover:text-sky-700 self-center'>

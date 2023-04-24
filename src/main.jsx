@@ -7,6 +7,7 @@ import Home from './routes/home.jsx'
 import Browse from './routes/browse.jsx'
 import Quiz from './routes/quiz'
 import './index.css'
+import DetailPage from './routes/detail-page.jsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,13 @@ const router = createBrowserRouter([
         element: <Browse />,
         loader: async () => {
           return fetch('http://localhost:3000/skis');
+        },
+      },
+      {
+        path: '/skis/:skiId',
+        element: <DetailPage />,
+        loader: async ({ params }) => {
+          return fetch(`http://localhost:3000/skis/${params.skiId}`);
         },
       },
       {
