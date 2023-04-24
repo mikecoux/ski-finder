@@ -4,7 +4,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 export default function Root() {
   return (
     <>
-        <div id='nav-bar'>
+        <div id='nav-bar' className='border-b-4'>
             <nav className='flex flow-row space-x-5 text-xl pt-6 pb-6 px-8'>
                 <NavLink to='/' end>
                     <img src='/images/profile.png' alt='Mike' className='h-12 hover:blur-sm'/>

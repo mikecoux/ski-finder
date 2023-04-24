@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SkiList from '../components/SkiList';
-import SkiDetails from '../components/SkiDetails';
+import SkiPreview from '../components/SkiPreview';
 
 export default function Browse () {
     const [skis, setSkis] = useState(useLoaderData())
@@ -10,9 +10,9 @@ export default function Browse () {
     const featuredSki = skis.find(ski => ski.id === selectedSkiId)
 
     return (
-        <div className='flex flex-row justify-center'>
+        <div className='flex flex-row p-8'>
             <SkiList skis={skis} onSelectSki={setSelectedSkiId}/>
-            <SkiDetails featuredSki={featuredSki}/>
+            <SkiPreview featuredSki={featuredSki}/>
         </div>
     )
 }
