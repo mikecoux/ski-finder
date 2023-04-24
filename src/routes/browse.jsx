@@ -10,8 +10,7 @@ export default function Browse () {
     const featuredSki = skis.find(ski => ski.id === selectedSkiId)
 
     return (
-        <div>
-            <h1>Browse For Skis Here</h1>
+        <div className='flex flex-row justify-center'>
             <SkiList skis={skis} onSelectSki={setSelectedSkiId}/>
             <SkiDetails featuredSki={featuredSki}/>
         </div>
