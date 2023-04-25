@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useNavigate } from "react-router-dom"
+import { useLoaderData, useNavigate } from "react-router-dom"
 import NavButton from "../components/NavButton"
 
 export default function DetailPage () {

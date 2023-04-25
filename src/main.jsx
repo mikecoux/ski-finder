@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, redirect, RouterProvider } from 'react-router-dom'
 import Root from './routes/root.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import Home from './routes/home.jsx'
@@ -8,6 +8,7 @@ import Browse from './routes/browse.jsx'
 import Quiz from './routes/quiz'
 import './index.css'
 import DetailPage from './routes/detail-page.jsx'
+import QuizQuestion from './components/QuizQuestion.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,24 @@ const router = createBrowserRouter([
       },
       {
         path: '/quiz',
+        element: <Quiz />,
+        action: async ({ request }) => {
+          let formData = await request.formData();
+          let formSubmission = Object.fromEntries(formData)
+          // console.log(formSubmission)
+          return redirect(`/quiz/${formSubmission.username}`)
+          // let formSubmission = {
+          //   username: formData.get("username")
+          // }
+          // return fetch('http://localhost:3000/users', {
+          //   method: 'POST',
+          //   headers: {'Content-Type': 'application/json'},
+          //   body: JSON.stringify(formSubmission)
+          // })
+        }
+      },
+      {
+        path: '/quiz/:user',
         element: <Quiz />
       }
     ]

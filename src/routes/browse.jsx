@@ -4,7 +4,7 @@ import SkiList from '../components/SkiList';
 import SkiPreview from '../components/SkiPreview';
 
 export default function Browse () {
-    const [skis, setSkis] = useState(useLoaderData())
+    const [skis, setSkis] = useState(useLoaderData()) //might not need state here
     const [selectedSkiId, setSelectedSkiId] = useState(1)
 
     const featuredSki = skis.find(ski => ski.id === selectedSkiId)
@@ -16,3 +16,5 @@ export default function Browse () {
         </div>
     )
 }
+
+//add filters here that use the useSearchParams hook

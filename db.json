@@ -1,79 +1,125 @@
 {
-    "skis": [
-        {
-            "id": 1,
-            "brand": "Head",
-            "name": "Kore 105",
-            "dimensions": {
-                "waist": 105,
-                "tip": 135,
-                "tail": 125
-            },
-            "lengths": [171, 180, 189],
-            "year": "2018",
-            "weight": 1860,
-            "image": "http://localhost:3000/images/kore.jpeg",
-            "content": "As the ultimate lightweight freeride ski, the KORE 105 has versatility for all-mountain adventures. The KORE construction reduces weight without sacrificing performance, thanks to a combination of Graphene, Karuba wood and multi layers of carbon. The sandwich sidewall construction adds responsiveness on hardpack snow, and tip and tail rocker provides flotation for deep days."
-        },
-        {
-            "id": 2,
-            "brand": "Atomic",
-            "name": "Bent Chetler 120",
-            "dimensions": {
-                "waist": 120,
-                "tip": 144,
-                "tail": 135
-            },
-            "lengths": [176, 184, 192],
-            "year": "2022",
-            "weight": 1800,
-            "image": "http://localhost:3000/images/chetler.jpg",
-            "content": "The Atomic Bent Chetler 120 is Chris Benchetler’s signature ski and the big brother of the Bent ski family. This pillow-bashing, powder-slashing machine features topsheet and base art by the man himself. With construction and shaping designed and refined by Chris Benchetler since 2008, the latest iteration redefines what’s possible in big mountain terrain. Dura Cap Sidewall construction combined with revolutionary HRZN Tech offers more surface area in the tip and tail for better tracking through chop and crud with less tip deflection. The Light Woodcore shaves weight while the Carbon Backbone adds strength and stiffness. The Powder Rocker profile offers the perfect amount of tip and tail turn-up, and camber under foot delivers epic performance through deep turns, side hits, and nose butters."
-        },
-        {
-            "id": 3,
-            "brand": "ON3P",
-            "name": "Woodsman 110",
-            "dimensions": {
-                "waist": 110,
-                "tip": 139,
-                "tail": 128
-            },
-            "lengths": [167, 172, 177, 182, 187, 192],
-            "year": "2022",
-            "weight": 2240,
-            "image": "http://localhost:3000/images/woodsman.jpeg",
-            "content": "The Woodsman 110 represents our take on an everyday platform for west coast skiers who need float and stability in their everyday ski.  Versatility is the name of the game these days - so an everyday platform that can double duty on deep days is what we find ourselves reaching for most of the time.  The Woodsman 110 blends equal parts muscle, float, and quickness for aggressive skiers needing a supportive everyday ride for their all mountain pursuits."
-        },
-        {
-            "id": 4,
-            "brand": "Blizzard",
-            "name": "Zero G 95",
-            "dimensions": {
-                "waist": 95,
-                "tip": 127,
-                "tail": 111
-            },
-            "lengths": [157, 164, 171, 178, 185],
-            "year": "2023",
-            "weight": 1260,
-            "image": "http://localhost:3000/images/zerog.jpeg",
-            "content": "The Zero G 95 was the ski of choice for ski mountaineers Hilaree Nelson and Jim Morrison to conquer their epic, first descent on the world’s highest, biggest line—the Lhotse Couloir on 27,940-foot Lhotse peak in Nepal’s Himalayas. The Zero G 95 gave them the performance they needed to get down safely—not to mention the high-altitude pow turns they scored! An ultra-lightweight paulownia wood core paired with updated iteration of Blizzard’s proven Carbon Drive technology in version 3.0 provides for efficiency on the skin track and a more consistent, stable feel on the descent. Your backcountry adventure may be closer to home, but you can still reap the benefits of Austrian engineering that delivers the best downhill performance for the weight."
-        },
-        {
-            "id": 5,
-            "brand": "Sego",
-            "name": "Comp 110",
-            "dimensions": {
-                "waist": 110,
-                "tip": 140,
-                "tail": 131
-            },
-            "lengths": [175, 181, 187, 192],
-            "year": "2021",
-            "weight": 2230,
-            "image": "http://localhost:3000/images/sego.jpg",
-            "content": "The 2022 Sego Cleaver Comp is a bit of a monster. Designed for Freeride World Tour Champion Isaac Freeland to compete on, these 110mm beasts are for charging mixed conditions on steep faces. A 7cm wide strip of titanal runs the length of the ski, providing a very stout backbone, and there is less rocker than the Big Horn series making these super stable. But Isaac is most famous for the tricks he thows and proper twin tip tail makes that possible on these and makes them stand out from the competition."
-        }
-    ]
+  "skis": [
+    {
+      "id": 1,
+      "brand": "Head",
+      "name": "Kore 105",
+      "dimensions": {
+        "waist": 105,
+        "tip": 135,
+        "tail": 125
+      },
+      "lengths": [
+        171,
+        180,
+        189
+      ],
+      "year": "2018",
+      "weight": 1860,
+      "image": "http://localhost:3000/images/kore.jpeg",
+      "content": "As the ultimate lightweight freeride ski, the KORE 105 has versatility for all-mountain adventures. The KORE construction reduces weight without sacrificing performance, thanks to a combination of Graphene, Karuba wood and multi layers of carbon. The sandwich sidewall construction adds responsiveness on hardpack snow, and tip and tail rocker provides flotation for deep days.",
+      "userId": []
+    },
+    {
+      "id": 2,
+      "brand": "Atomic",
+      "name": "Bent Chetler 120",
+      "dimensions": {
+        "waist": 120,
+        "tip": 144,
+        "tail": 135
+      },
+      "lengths": [
+        176,
+        184,
+        192
+      ],
+      "year": "2022",
+      "weight": 1800,
+      "image": "http://localhost:3000/images/chetler.jpg",
+      "content": "The Atomic Bent Chetler 120 is Chris Benchetler’s signature ski and the big brother of the Bent ski family. This pillow-bashing, powder-slashing machine features topsheet and base art by the man himself. With construction and shaping designed and refined by Chris Benchetler since 2008, the latest iteration redefines what’s possible in big mountain terrain. Dura Cap Sidewall construction combined with revolutionary HRZN Tech offers more surface area in the tip and tail for better tracking through chop and crud with less tip deflection. The Light Woodcore shaves weight while the Carbon Backbone adds strength and stiffness. The Powder Rocker profile offers the perfect amount of tip and tail turn-up, and camber under foot delivers epic performance through deep turns, side hits, and nose butters.",
+      "userId": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "ON3P",
+      "name": "Woodsman 110",
+      "dimensions": {
+        "waist": 110,
+        "tip": 139,
+        "tail": 128
+      },
+      "lengths": [
+        167,
+        172,
+        177,
+        182,
+        187,
+        192
+      ],
+      "year": "2022",
+      "weight": 2240,
+      "image": "http://localhost:3000/images/woodsman.jpeg",
+      "content": "The Woodsman 110 represents our take on an everyday platform for west coast skiers who need float and stability in their everyday ski.  Versatility is the name of the game these days - so an everyday platform that can double duty on deep days is what we find ourselves reaching for most of the time.  The Woodsman 110 blends equal parts muscle, float, and quickness for aggressive skiers needing a supportive everyday ride for their all mountain pursuits.",
+      "userId": []
+    },
+    {
+      "id": 4,
+      "brand": "Blizzard",
+      "name": "Zero G 95",
+      "dimensions": {
+        "waist": 95,
+        "tip": 127,
+        "tail": 111
+      },
+      "lengths": [
+        157,
+        164,
+        171,
+        178,
+        185
+      ],
+      "year": "2023",
+      "weight": 1260,
+      "image": "http://localhost:3000/images/zerog.jpeg",
+      "content": "The Zero G 95 was the ski of choice for ski mountaineers Hilaree Nelson and Jim Morrison to conquer their epic, first descent on the world’s highest, biggest line—the Lhotse Couloir on 27,940-foot Lhotse peak in Nepal’s Himalayas. The Zero G 95 gave them the performance they needed to get down safely—not to mention the high-altitude pow turns they scored! An ultra-lightweight paulownia wood core paired with updated iteration of Blizzard’s proven Carbon Drive technology in version 3.0 provides for efficiency on the skin track and a more consistent, stable feel on the descent. Your backcountry adventure may be closer to home, but you can still reap the benefits of Austrian engineering that delivers the best downhill performance for the weight.",
+      "userId": []
+    },
+    {
+      "id": 5,
+      "brand": "Sego",
+      "name": "Comp 110",
+      "dimensions": {
+        "waist": 110,
+        "tip": 140,
+        "tail": 131
+      },
+      "lengths": [
+        175,
+        181,
+        187,
+        192
+      ],
+      "year": "2021",
+      "weight": 2230,
+      "image": "http://localhost:3000/images/sego.jpg",
+      "content": "The 2022 Sego Cleaver Comp is a bit of a monster. Designed for Freeride World Tour Champion Isaac Freeland to compete on, these 110mm beasts are for charging mixed conditions on steep faces. A 7cm wide strip of titanal runs the length of the ski, providing a very stout backbone, and there is less rocker than the Big Horn series making these super stable. But Isaac is most famous for the tricks he thows and proper twin tip tail makes that possible on these and makes them stand out from the competition.",
+      "userId": [
+        1
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "sproot",
+      "stokeProfile": {
+        "playfulness": 5,
+        "performance": 2,
+        "rocker": 3
+      }
+    }
+  ]
 }
