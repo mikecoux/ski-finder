@@ -1,9 +1,10 @@
-import { Form, useSubmit, useParams } from "react-router-dom";
+import { Form, useSubmit, useParams, useNavigate } from "react-router-dom";
 import QuizQuestion from "../components/QuizQuestion";
 import { useEffect, useState } from "react";
 
 export default function Quiz () {
     const submit = useSubmit()
+    const navigate = useNavigate()
     const { user } = useParams()
     const [question, setQuestion] = useState(0)
     const [stokeData, setStokeData] = useState({
@@ -17,11 +18,13 @@ export default function Quiz () {
         "carving": ''
     })
 
-    console.log(question)
-
     useEffect(() => {
         user ? setQuestion(1) : null
     },[user])
+
+    useEffect(() => {
+        question === 9 ? navigate(`/quiz/${user}/results`, {state: { stokeData }}) : null
+    },[question])
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -55,18 +58,12 @@ export default function Quiz () {
         case 6: 
             return <QuizQuestion questionTitle={'Rate your Deep Pow stoke:'} questionContext={'Pow skis are fat and rockered. They will help you stay on top of deeper snow, but will be hard to get on edge in hard pack conditions.'} disciplineName={'powder'} onNext={handleNext}/>;
         case 7: 
-            return <QuizQuestion questionTitle={'Rate your stoke for Pillows & Cliffs:'} questionContext={'Landing airs will be easier with a fat ski (greater surface area) and one that is less directional as to be more accomodating in case of a backseat landing.'} disciplineName={'moguls'} onNext={handleNext}/>;
+            return <QuizQuestion questionTitle={'Rate your stoke for Pillows & Cliffs:'} questionContext={'Landing airs will be easier with a fat ski (greater surface area) and one that is less directional as to be more accomodating in case of a backseat landing.'} disciplineName={'drops'} onNext={handleNext}/>;
         case 8: 
             return <QuizQuestion questionTitle={'Rate your Groomer stoke:'} questionContext={'Not joking here. Ripping cord is respectable so long as you are skilled in the other disciplines as well.'} disciplineName={'carving'} onNext={handleNext}/>;
-        case 9:
-            return <QuizResults stokeData={stokeData}/>
         default:
             null
         }
-    }
-
-    function displayResults() {
-
     }
 
     return (

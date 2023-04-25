@@ -8,7 +8,7 @@ import Browse from './routes/browse.jsx'
 import Quiz from './routes/quiz'
 import './index.css'
 import DetailPage from './routes/detail-page.jsx'
-import QuizQuestion from './components/QuizQuestion.jsx'
+import QuizResults from './routes/quiz-results.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,22 +38,16 @@ const router = createBrowserRouter([
         element: <Quiz />,
         action: async ({ request }) => {
           let formData = await request.formData();
-          let formSubmission = Object.fromEntries(formData)
-          // console.log(formSubmission)
-          return redirect(`/quiz/${formSubmission.username}`)
-          // let formSubmission = {
-          //   username: formData.get("username")
-          // }
-          // return fetch('http://localhost:3000/users', {
-          //   method: 'POST',
-          //   headers: {'Content-Type': 'application/json'},
-          //   body: JSON.stringify(formSubmission)
-          // })
+          return redirect(`/quiz/${formData.get("username")}`)
         }
       },
       {
         path: '/quiz/:user',
         element: <Quiz />
+      },
+      {
+        path: '/quiz/:user/results',
+        element: <QuizResults />
       }
     ]
   }
