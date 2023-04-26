@@ -9,7 +9,7 @@ export default function QuizQuestion ({ questionTitle, questionContext, discipli
         <h3>{questionContext}</h3>
         <form onSubmit={(e) => onNext(e, disciplineName, sliderValue)}>
             <label htmlFor="slider">Stoke</label>
-            <input type="range" min="1" max="5" value={sliderValue} id="slider" step="1" list="stokeSettings" name={disciplineName} onChange={(e) => setSliderValue(e.target.value)}/>
+            <input type="range" min="1" max="5" value={sliderValue} id="slider" step="1" list="stokeSettings" name={disciplineName} onChange={(e) => setSliderValue(parseInt(e.target.value))}/>
             <datalist id="stokeSettings">
                 <option>1</option>
                 <option>2</option>
