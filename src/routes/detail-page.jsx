@@ -19,7 +19,7 @@ export default function DetailPage () {
                     </ul><br />
                     <NavButton linkTo={'/skis'} buttonText={'Add to Quiver'}/>
                 </div>
-                <img src={image} alt={name} className="block mx-auto shrink max-h-96"/>
+                <img src={image[0]} alt={name} className="block mx-auto shrink max-h-96"/>
             </div>
             <div className="m-8">
                 <p>{content}</p><br />

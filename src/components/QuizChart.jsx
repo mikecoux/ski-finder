@@ -10,7 +10,7 @@ export default function QuizChart ({ data }) {
         datasets: [
             {
               label: 'Stoke Profile',
-              data: [data[0], data[1], data[2]],
+              data: [data.playfulness, data.performance, data.rocker],
               backgroundColor: [
                 '#092327',
                 '#00A9A5',

@@ -18,20 +18,24 @@ export default function Quiz () {
         "carving": ''
     })
 
+    //Displays first question after a user has entered a username
     useEffect(() => {
         user ? setQuestion(1) : null
     },[user])
 
+    //Redirects user to results page when they complete the quiz and sends data through
     useEffect(() => {
         question === 9 ? navigate(`/quiz/${user}/results`, {state: { stokeData }}) : null
     },[question])
 
+    //Submits the entered username to the router
     function handleSubmit(e) {
         e.preventDefault()
         submit(e.currentTarget.form)
         e.currentTarget.form.reset()
     }
 
+    //Updates form state and advances question when user clicks next
     function handleNext(e, name, value) {
         e.preventDefault()
         setStokeData({
@@ -43,6 +47,7 @@ export default function Quiz () {
         })
     }
 
+    //Switch statement displays a question depending on current state
     function displayQuestion() {
         switch (question) {
         case 1: 

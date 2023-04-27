@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useRouteLoaderData } from 'react-router-dom';
 import SkiList from '../components/SkiList';
 import SkiPreview from '../components/SkiPreview';
 
 export default function Browse () {
-    const [skis, setSkis] = useState(useLoaderData()) //might not need state here
+    const skis = useRouteLoaderData("root")
     const [selectedSkiId, setSelectedSkiId] = useState(1)
-
     const featuredSki = skis.find(ski => ski.id === selectedSkiId)
 
     return (

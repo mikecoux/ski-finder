@@ -14,6 +14,10 @@ const router = createBrowserRouter([
   {
     element: <Root />,
     errorElement: <ErrorPage />,
+    id: "root",
+    loader: async () => {
+      return fetch('http://localhost:3000/skis');
+    },
     children: [
       {
         path: '/',
@@ -21,10 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/skis',
-        element: <Browse />,
-        loader: async () => {
-          return fetch('http://localhost:3000/skis');
-        },
+        element: <Browse />
       },
       {
         path: '/skis/:skiId',
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
         element: <Quiz />,
         action: async ({ request }) => {
           let formData = await request.formData();
-          return redirect(`/quiz/${formData.get("username")}`)
+          return redirect(`/quiz/${formData.get("username").toLowerCase()}`)
         }
       },
       {
@@ -47,14 +48,29 @@ const router = createBrowserRouter([
       },
       {
         path: '/quiz/:user/results',
-        element: <QuizResults />
+        element: <QuizResults />,
+        loader: async () => {
+          return fetch('http://localhost:3000/users/');
+        },
+        // action: async ({ request }) => {
+        //   switch (request.method) {
+        //     case 'PATCH': {
+        //       let formData = Object.fromEntries(await request.formData())
+        //       console.log(formData.id)
+        //       return null
+        //     }
+        //     case 'POST': {
+        //       let formData = await request.formData()
+        //       console.log(formData.getAll)
+        //       return null
+        //     }
+        //   }
+        // } 
       }
     ]
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <RouterProvider router={router} />
 )

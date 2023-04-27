@@ -1,9 +1,13 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams, useLoaderData } from 'react-router-dom'
 import { matrix, multiply } from 'mathjs'
 import QuizChart from '../components/QuizChart'
+import { useEffect } from 'react'
+import RecommendedSkis from '../components/RecommendedSkis'
 
 export default function QuizResults() {
     const location = useLocation()
+    const { user } = useParams()
+    const userData = useLoaderData()
     const { moguls, freeride, park, steeps, carving, drops, powder, technical } = location.state.stokeData
 
     //Schema for Matrix A
@@ -16,9 +20,9 @@ export default function QuizResults() {
     
     const mA = matrix(
         [
-            [4, 3, 5, 2, 1, 4, 3, 3],
-            [2, 4, 1, 5, 5, 3, 3, 2],
-            [2, 4, 3, 3, 1, 4, 5, 3]
+            [5, 7, 10, 2, 1, 2, 2, 3],
+            [8, 3, 1, 10, 10, 8, 2, 7],
+            [2, 6, 3, 4, 2, 4, 10, 3]
         ]
     )
 
@@ -36,30 +40,60 @@ export default function QuizResults() {
         ]
     )
 
-    // const mB = matrix (
-    //     [
-    //         [1],
-    //         [1],
-    //         [0],
-    //         [1],
-    //         [0],
-    //         [1],
-    //         [1],
-    //         [0]
-    //     ]
-    // )
-
+    //Calculting the stoke profile
     const mC = multiply(mA, mB)
     const total = (parseInt(mC._data[0]) + parseInt(mC._data[1]) + parseInt(mC._data[2]))
-    const playfulness = (parseInt(mC._data[0]) / total)
-    const performance = (parseInt(mC._data[1]) / total)
-    const rocker = (parseInt(mC._data[2]) / total)
+    const playRatio = (parseInt(mC._data[0]) / total)
+    const perfRatio = (parseInt(mC._data[1]) / total)
+    const rockRatio = (parseInt(mC._data[2]) / total)
+
+    //Creating objects for CRUD
+    const userStokeObj = {
+        playfulness: playRatio,
+        performance: perfRatio,
+        rocker: rockRatio
+    }
+    const userObj = {
+        username: user,
+        stokeProfile: userStokeObj
+    }
+
+    //CRUD functions
+    function newUser() {
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(userObj)
+        })
+    }
+
+    function updateUser (id) {
+        fetch(`http://localhost:3000/users/${id}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(userObj)
+        })
+    }
+
+    //POST's or PATCH's depending on whether the username exists or not
+    useEffect(() => {
+        let filteredUsers = userData.filter(skier => skier.username === user )
+        if (filteredUsers.length !== 0) {
+            let userId = filteredUsers[0].id
+            updateUser(userId)
+        } else {
+            newUser()
+        }
+    }, [])
 
     return (
         <div>
             <h1>Results</h1>
             <div className='w-1/2'>
-                <QuizChart data={[playfulness, performance, rocker]}/>
+                <QuizChart data={userStokeObj}/>
+            </div>
+            <div className='w-1/2'>
+                <RecommendedSkis userData={userStokeObj}/>
             </div>
         </div>
     )
