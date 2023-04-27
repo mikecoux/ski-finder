@@ -14,6 +14,8 @@ export default function RecommendedSkis ({ userData }) {
         ]
     )
 
+    console.log('User Matrix: ' + userMatrix)
+
     //create empty array
     const sumOfSquares = []
 
@@ -38,6 +40,8 @@ export default function RecommendedSkis ({ userData }) {
         )
     })
 
+    console.log('Sum of Squares: ' + sumOfSquares)
+
     //sort external array by lowest sum of squares
     //take the top 3 and push their skiIDs to a new array
     const top3 = []
@@ -47,6 +51,8 @@ export default function RecommendedSkis ({ userData }) {
     const top3Skis = skiData.filter((ski) => {
         return top3[0].includes(ski.id)
     })
+
+    console.log(top3Skis)
 
     return (
         <SkiListTiles skiData={top3Skis} />

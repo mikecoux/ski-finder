@@ -661,6 +661,33 @@
         "rocker": 0.2956521739130435
       },
       "id": 27
+    },
+    {
+      "username": "sterling",
+      "stokeProfile": {
+        "playfulness": 0.24647887323943662,
+        "performance": 0.42018779342723006,
+        "rocker": 0.3333333333333333
+      },
+      "id": 28
+    },
+    {
+      "username": "sam",
+      "stokeProfile": {
+        "playfulness": 0.2413127413127413,
+        "performance": 0.4517374517374517,
+        "rocker": 0.30694980694980695
+      },
+      "id": 29
+    },
+    {
+      "username": "michael",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 30
     }
   ]
 }
