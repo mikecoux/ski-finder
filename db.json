@@ -553,6 +553,114 @@
         "rocker": 0.2956521739130435
       },
       "id": 15
+    },
+    {
+      "username": "lauren",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 16
+    },
+    {
+      "username": "niko",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 17
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 18
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 19
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 20
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 21
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 22
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 23
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 24
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 25
+    },
+    {
+      "username": "bruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 26
+    },
+    {
+      "username": "testttiting",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 27
     }
   ]
 }

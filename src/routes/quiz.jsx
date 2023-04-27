@@ -47,6 +47,15 @@ export default function Quiz () {
         })
     }
 
+    //shows the progress bar
+    function showProgressBar() {
+        if(question === 0) {
+            return ' hidden'
+        } else {
+            return ''
+        }
+    }
+
     //advances the progress bar
     function progressBar() {
         switch (question) {
@@ -98,7 +107,7 @@ export default function Quiz () {
     return (
         <div className="flex flex-column justify-center">
             <div className="w-1/3">
-                <div className="border-2 border-slate-200 w-1/3 h-4 rounded-lg mt-8 relative mx-auto">
+                <div className={"border-2 border-slate-200 w-1/3 h-4 rounded-lg mt-8 relative mx-auto" + showProgressBar()}>
                     <div className={"bg-sky-400 h-full rounded-lg absolute top-0 left-0" + progressBar()}></div>
                 </div>
                 <div className="my-4 border-2 rounded-lg space-y-4 p-8">

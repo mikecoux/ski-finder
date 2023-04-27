@@ -49,6 +49,6 @@ export default function RecommendedSkis ({ userData }) {
     })
 
     return (
-       <SkiListTiles skiData={top3Skis} />
+        <SkiListTiles skiData={top3Skis} />
     )
 }

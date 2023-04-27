@@ -87,13 +87,14 @@ export default function QuizResults() {
     }, [])
 
     return (
-        <div>
-            <h1>Results</h1>
-            <div className='w-1/2'>
+        <div className='w-4/5 block mx-auto my-8'>
+            <h1 className='text-center text-3xl font-bold'>{user.charAt(0).toUpperCase() + user.slice(1) + "'s " + "Stoke Profile"}:</h1>
+            <div className='space-y-4 h-screen'>
                 <QuizChart data={userStokeObj}/>
-            </div>
-            <div className='w-1/2'>
-                <RecommendedSkis userData={userStokeObj}/>
+                <div className='space-y-4'>
+                    <h3 className='text-center font-bold'>These skis match your stoke:</h3>
+                    <RecommendedSkis userData={userStokeObj}/>
+                </div>
             </div>
         </div>
     )
