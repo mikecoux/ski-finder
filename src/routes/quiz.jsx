@@ -72,14 +72,16 @@ export default function Quiz () {
     }
 
     return (
-        <div>
-            <h1>Build Your Profile</h1>
-            <Form className={user ? "hidden" : null} method="post" action="/quiz">
-                <label htmlFor="userInput">Username:</label>
-                <input id="userInput" type="text" placeholder="Enter username here..." name="username" />
-                <button type="submit" onClick={handleSubmit}>Next</button>
-            </Form>
-            {displayQuestion()}
+        <div className="flex flex-column justify-center">
+            <div className="w-1/3 my-8 border-2 rounded-lg space-y-4 p-8">
+                <Form className={user ? "hidden" : null} method="post" action="/quiz">
+                    <label htmlFor="userInput" className="block mx-auto text-lg font-bold text-center">Enter Username:</label><br/>
+                    <input id="userInput" type="text" placeholder="Type here..." name="username" className="block mx-auto text-center"/><br/>
+                    <button type="submit" onClick={handleSubmit} className="bg-sky-500 hover:bg-sky-700 rounded-full py-1 px-2.5 text-white block mx-auto">Next</button>
+                </Form>
+                {/* Would be cool to figure out resetting state if user clicks the back button */}
+                {displayQuestion()}
+            </div>
         </div>
     )
 }

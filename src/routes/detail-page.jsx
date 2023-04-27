@@ -6,7 +6,7 @@ export default function DetailPage () {
     const navigate = useNavigate()
 
     return (
-        <>
+        <div className="w-4/5 block mx-auto">
             <div className="m-8 flex flex-row">
                 <div className="basis-1/4 min-w-fit border-r-4 pr-4">
                     <h1 className="text-lg font-bold pb-4">{brand} {name} <br />{year}</h1>
@@ -25,6 +25,6 @@ export default function DetailPage () {
                 <p>{content}</p><br />
                 <button onClick={() => navigate(-1)} className="block mx-auto w-fit text-sky-500 hover:text-sky-700">&larr; Back to browse</button>
             </div>
-        </>
+        </div>
     )
 }

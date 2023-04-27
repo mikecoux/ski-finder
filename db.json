@@ -190,6 +190,78 @@
         "rocker": 0.2956521739130435
       },
       "id": 4
+    },
+    {
+      "username": "adam",
+      "stokeProfile": {
+        "playfulness": 0.2725225225225225,
+        "performance": 0.4346846846846847,
+        "rocker": 0.2927927927927928
+      },
+      "id": 5
+    },
+    {
+      "username": "spruce",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 6
+    },
+    {
+      "username": "spoot",
+      "stokeProfile": {
+        "playfulness": 0.29819277108433734,
+        "performance": 0.42771084337349397,
+        "rocker": 0.2740963855421687
+      },
+      "id": 7
+    },
+    {
+      "username": "log",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 8
+    },
+    {
+      "username": "babb",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 9
+    },
+    {
+      "username": "test",
+      "stokeProfile": {
+        "playfulness": 0.25316455696202533,
+        "performance": 0.3949367088607595,
+        "rocker": 0.3518987341772152
+      },
+      "id": 10
+    },
+    {
+      "username": "m",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 11
+    },
+    {
+      "username": "fff",
+      "stokeProfile": {
+        "playfulness": 0.2782608695652174,
+        "performance": 0.4260869565217391,
+        "rocker": 0.2956521739130435
+      },
+      "id": 12
     }
   ]
 }

@@ -2,7 +2,7 @@ import SkiTile from "./SkiTile"
 
 export default function SkiListTiles ({ skiData }) {
     const skiTiles = skiData.map((ski) => {
-        return <SkiTile key={ski.id} image={ski.image} brand={ski.brand} name={ski.name} />
+        return <SkiTile key={ski.id} id={ski.id} image={ski.image} brand={ski.brand} name={ski.name} />
     }) 
 
     return (

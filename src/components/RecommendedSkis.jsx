@@ -1,5 +1,6 @@
 import { useRouteLoaderData } from "react-router-dom"
 import { matrix, subtract, square, map, squeeze } from 'mathjs'
+import SkiListTiles from "./SkiListTiles"
 
 export default function RecommendedSkis ({ userData }) {
     const skiData = useRouteLoaderData("root")
@@ -43,14 +44,11 @@ export default function RecommendedSkis ({ userData }) {
     top3.push(sumOfSquares.sort((a, b) => a[1]-b[1]).slice(0,3).map(sum => sum[0]))
 
     //pass top 3 results to skiListTiles component
-
     const top3Skis = skiData.filter((ski) => {
-        return top3.includes(ski.id) ? ski : null
+        return top3[0].includes(ski.id)
     })
 
-    console.log(top3Skis)
-
     return (
-        <div></div>
+       <SkiListTiles skiData={top3Skis} />
     )
 }
