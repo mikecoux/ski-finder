@@ -13,8 +13,9 @@ export default function SkiPreview ({ featuredSki }) {
                     <NavButton linkTo={'/skis'} buttonText={'Add to Quiver'}/>
                 </div>
             </div>
-            <div className="w-1/2">
-                <p className="my-auto italic">{content}</p>
+            <div className="w-1/2 space-y-4">
+                <h3 className="font-bold italic text-center">From the manufacturer:</h3>
+                <p className="my-auto">{content}</p>
             </div>
         </div>
     )

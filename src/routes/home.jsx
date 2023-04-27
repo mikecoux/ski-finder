@@ -5,7 +5,7 @@ export default function Home () {
     const skiData = useRouteLoaderData("root")
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 pb-6">
             <div className="relative">
                 <img src="./images/ski-slash.jpeg" alt="Mike skiing." className="opacity-75"/>
                 <h1 className="text-center text-3xl font-bold absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">Welcome To Mike's Ski Finder</h1>

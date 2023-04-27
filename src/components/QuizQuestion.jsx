@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function QuizQuestion ({ questionTitle, questionContext, disciplineName, onNext }) {
+export default function QuizQuestion ({ questionTitle, questionContext, disciplineName, onNext, buttonText }) {
     const [sliderValue, setSliderValue] = useState(2)
 
     return (
@@ -19,7 +19,7 @@ export default function QuizQuestion ({ questionTitle, questionContext, discipli
                     <option>4</option>
                     <option>5</option>
                 </datalist><br/>
-                <button type="submit" className="bg-sky-500 hover:bg-sky-700 rounded-full py-1 px-2.5 text-white block mx-auto">Next</button>
+                <button type="submit" className="bg-sky-500 hover:bg-sky-700 rounded-full py-1 px-2.5 text-white block mx-auto">{buttonText}</button>
             </form>
         </div>
     )
