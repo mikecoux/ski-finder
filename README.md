@@ -9,7 +9,7 @@ With this application, you'll be able to browse a handpicked selection of skis a
 * API via json-server
 
 ### Features:
-* Server-side rendering & routing
+* Server-side rendering & routing??
 * Using the sum of squares method to recommend skis given user preferences
 
 ## Installation
