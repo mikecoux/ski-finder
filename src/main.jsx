@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     id: "root",
     loader: async () => {
-      return fetch('http://localhost:3000/skis');
+      return fetch(`${process.env.REACT_APP_API_URL}/skis`);
     },
     children: [
       {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         path: '/skis/:skiId',
         element: <DetailPage />,
         loader: async ({ params }) => {
-          return fetch(`http://localhost:3000/skis/${params.skiId}`);
+          return fetch(`${process.env.REACT_APP_API_URL}/skis/${params.skiId}`);
         },
       },
       {
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         path: '/quiz/:user/results',
         element: <QuizResults />,
         loader: async () => {
-          return fetch('http://localhost:3000/users/');
+          return fetch(`${process.env.REACT_APP_API_URL}/users`);
         },
         // action: async ({ request }) => {
         //   switch (request.method) {

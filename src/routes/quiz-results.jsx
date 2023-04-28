@@ -60,7 +60,7 @@ export default function QuizResults() {
 
     //CRUD functions
     function newUser() {
-        fetch('http://localhost:3000/users', {
+        fetch(`${process.env.REACT_APP_API_URL}/users`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)
@@ -68,7 +68,7 @@ export default function QuizResults() {
     }
 
     function updateUser (id) {
-        fetch(`http://localhost:3000/users/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/users/${id}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)
