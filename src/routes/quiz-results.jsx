@@ -60,7 +60,7 @@ export default function QuizResults() {
 
     //CRUD functions
     function newUser() {
-        fetch(`${process.env.REACT_APP_API_URL}/users`, {
+        fetch(`${import.meta.env.VITE_APP_API_URL}/users`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)
@@ -68,7 +68,7 @@ export default function QuizResults() {
     }
 
     function updateUser (id) {
-        fetch(`${process.env.REACT_APP_API_URL}/users/${id}`, {
+        fetch(`${import.meta.env.VITE_APP_API_URL}/users/${id}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)

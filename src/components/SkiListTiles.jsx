@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 
 export default function SkiListTiles ({ skiData }) {
     const location = useLocation()
-
+    console.log(skiData)
     const skiTiles = skiData.map((ski) => {
         return <SkiTile key={ski.id} id={ski.id} image={ski.image} brand={ski.brand} name={ski.name} />
     }) 
