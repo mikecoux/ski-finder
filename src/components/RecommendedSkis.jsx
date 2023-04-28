@@ -14,7 +14,7 @@ export default function RecommendedSkis ({ userData }) {
         ]
     )
 
-    console.log('User Matrix: ' + userMatrix)
+    console.log('4) Normalized Matrix C: ' + userMatrix)
 
     //create empty array
     const sumOfSquares = []
@@ -29,18 +29,19 @@ export default function RecommendedSkis ({ userData }) {
                 [ski.stokeProfile.rocker]
             ]
         )
+        console.log(`5) Create a matrix for each ski from the stoke profile: ${ski.name} - ${skiMatrix}`)
         //subtract, square the matrices, and then find the sum of their entries
         const step1 = subtract(userMatrix, skiMatrix)
         const step2 = squeeze(step1._data)
         const step3 = map(step2, square)
         const result = step3.reduce((a, b) => a + b, 0)
+        console.log(`6) Subtract ski matrix from user matrix, square result, add the entries: ${ski.name} - ${result}`)
+
         //populate external array
         return sumOfSquares.push(
             [ski.id, result]
         )
     })
-
-    console.log('Sum of Squares: ' + sumOfSquares)
 
     //sort external array by lowest sum of squares
     //take the top 3 and push their skiIDs to a new array
@@ -49,10 +50,9 @@ export default function RecommendedSkis ({ userData }) {
 
     //pass top 3 results to skiListTiles component
     const top3Skis = skiData.filter((ski) => {
+        console.log('7) Recommend top 3 skis (by lowest SoS): ' + ski.name + ' - ' + top3[0].includes(ski.id))
         return top3[0].includes(ski.id)
     })
-
-    console.log(top3Skis)
 
     return (
         <SkiListTiles skiData={top3Skis} />

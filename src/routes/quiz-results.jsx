@@ -9,7 +9,6 @@ export default function QuizResults() {
     const { user } = useParams()
     const userData = useLoaderData()
     const { moguls, freeride, park, steeps, carving, drops, powder, technical } = location.state.stokeData
-
     //Schema for Matrix A
     /*
                     moguls  freeride  park  steeps  carving  drops  powder  technical
@@ -25,6 +24,7 @@ export default function QuizResults() {
             [2, 6, 3, 4, 2, 4, 10, 3]
         ]
     )
+    console.log(`1) Matrix A (hardcoded key): ${mA}`)
 
     // Matrix B is comprised of the user inputs
     const mB = matrix(
@@ -39,9 +39,12 @@ export default function QuizResults() {
             [technical]
         ]
     )
+    console.log(`2) Matrix B (user inputs): ${mB}`)
 
     //Calculting the stoke profile
     const mC = multiply(mA, mB)
+    console.log(`3) Matrix C (mA * mB): ${mC}`)
+
     const total = (parseInt(mC._data[0]) + parseInt(mC._data[1]) + parseInt(mC._data[2]))
     const playRatio = (parseInt(mC._data[0]) / total)
     const perfRatio = (parseInt(mC._data[1]) / total)
@@ -65,6 +68,8 @@ export default function QuizResults() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)
         })
+            .then(res => res.json())
+            .then(data => console.log(`8) Data sent to server: ${JSON.stringify(data)}`))
     }
 
     function updateUser (id) {
@@ -73,6 +78,8 @@ export default function QuizResults() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(userObj)
         })
+            .then(res => res.json())
+            .then(data => console.log(`8) Data sent to server: ${JSON.stringify(data)}`))
     }
 
     //POST's or PATCH's depending on whether the username exists or not
